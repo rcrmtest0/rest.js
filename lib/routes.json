@@ -92,7 +92,8 @@
     },
     "getEventsForRepoIssues": {
       "alias": "issues.getEventsForRepo",
-      "deprecated": "`activity.getEventsForRepoIssues()` is deprecated, use `issues.getEventsForRepo`"
+      "deprecated": "`activity.getEventsForRepoIssues()` is deprecated, use `issues.getEventsForRepo`",
+      "params": {}
     },
     "getEventsForRepoNetwork": {
       "method": "GET",
@@ -2538,7 +2539,8 @@
     },
     "getCommitSignatureVerification": {
       "alias": "gitdata.getCommit",
-      "deprecated": "`gitdata.getCommitSignatureVerification()` is deprecated, use `gitdata.getCommit()`"
+      "deprecated": "`gitdata.getCommitSignatureVerification()` is deprecated, use `gitdata.getCommit()`",
+      "params": {}
     },
     "getReference": {
       "method": "GET",
@@ -2602,7 +2604,8 @@
     },
     "getTagSignatureVerification": {
       "alias": "gitdata.getTag",
-      "deprecated": "`gitdata.getTagSignatureVerification()` is deprecated, use `gitdata.getTag()`"
+      "deprecated": "`gitdata.getTagSignatureVerification()` is deprecated, use `gitdata.getTag()`",
+      "params": {}
     },
     "getTags": {
       "method": "GET",
@@ -5816,6 +5819,7 @@
           "alias": "card_id"
         },
         "position": {
+          "regex": "^(top|bottom|after:\\d+)$",
           "required": true,
           "type": "string",
           "validation": "^(top|bottom|after:\\d+)$"
@@ -5837,6 +5841,7 @@
           "alias": "column_id"
         },
         "position": {
+          "regex": "^(first|last|after:\\d+)$",
           "required": true,
           "type": "string",
           "validation": "^(first|last|after:\\d+)$"
@@ -7593,6 +7598,14 @@
       "params": {
         "author": {
           "type": "object"
+        },
+        "author.email": {
+          "required": true,
+          "type": "string"
+        },
+        "author.name": {
+          "required": true,
+          "type": "string"
         },
         "branch": {
           "type": "string"
@@ -10096,6 +10109,14 @@
       "params": {
         "author": {
           "type": "object"
+        },
+        "author.email": {
+          "required": true,
+          "type": "string"
+        },
+        "author.name": {
+          "required": true,
+          "type": "string"
         },
         "branch": {
           "type": "string"
