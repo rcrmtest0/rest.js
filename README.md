@@ -1,4 +1,4 @@
-# rest.js
+# rest.js Sandeep
 
 > GitHub REST API client for Node.js
 
